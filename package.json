@@ -15,7 +15,8 @@
     "@sap/cds-dk": "^9"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "watch-business-partner-example": "cds watch --open business-partner-example/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "private": true,
   "cds": {
@@ -39,5 +40,8 @@
     "uaa": {
       "kind": "xsuaa"
     }
-  }
+  },
+  "sapux": [
+    "app/business-partner-example"
+  ]
 }
