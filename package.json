@@ -7,10 +7,12 @@
     "@sap-cloud-sdk/http-client": "^4",
     "@sap-cloud-sdk/resilience": "^4.4.0",
     "@sap/cds": "^9",
-    "express": "^4"
+    "express": "^4",
+    "@sap/xssec": "^4"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^2"
+    "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": "^9"
   },
   "scripts": {
     "start": "cds-serve"
@@ -27,7 +29,15 @@
             "APIKey": "IIbIbqrUTMrIQoZgeZkWSfB69VoYrCNY"
           }
         }
+      },
+      "[production]": {
+        "credentials": {
+          "destination": "API_BUSINESS_PARTNER"
+        }
       }
+    },
+    "uaa": {
+      "kind": "xsuaa"
     }
   }
 }
